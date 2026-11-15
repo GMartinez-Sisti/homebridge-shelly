@@ -6,6 +6,14 @@
 [![verified-by-homebridge](https://badgen.net/badge/homebridge/verified/purple)](https://github.com/homebridge/homebridge/wiki/Verified-Plugins)
 [![certified-hoobs-plugin](https://badgen.net/badge/HOOBS/Certified/yellow)](https://plugins.hoobs.org)
 
+> **Note — maintained fork.** This is a fork of
+> [`alexryd/homebridge-shelly`](https://github.com/alexryd/homebridge-shelly),
+> which is unmaintained (last release v0.19.1). The upstream plugin crashes on
+> Homebridge 2.x / HAP-NodeJS 1.x, which moved several HAP enums
+> (`Service.BatteryService`, `Accessory.Categories`, `Characteristic.Formats` /
+> `Perms`) to top-level `hap` exports. This fork patches those so first-gen
+> Shelly devices keep working on current Homebridge.
+
 [Homebridge](https://homebridge.io) plugin for [Shelly](https://shelly.cloud),
 enabling HomeKit support for the first generation of Shelly devices.
 
