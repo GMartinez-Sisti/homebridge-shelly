@@ -1,6 +1,5 @@
 
 module.exports = homebridge => {
-  const Accessory = homebridge.hap.Accessory
   const WindowAbility = require('../abilities/window')(homebridge)
   const { ShellyAccessory } = require('./base')(homebridge)
 
@@ -16,7 +15,7 @@ module.exports = homebridge => {
     }
 
     get category() {
-      return Accessory.Categories.WINDOW
+      return homebridge.hap.Categories.WINDOW
     }
 
     /**

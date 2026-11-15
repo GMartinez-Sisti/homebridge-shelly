@@ -1,7 +1,6 @@
 const { handleFailedRequest } = require('../util/error-handlers')
 
 module.exports = homebridge => {
-  const Accessory = homebridge.hap.Accessory
   const Characteristic = homebridge.hap.Characteristic
   const PlatformAccessory = homebridge.platformAccessory
   const Service = homebridge.hap.Service
@@ -52,7 +51,7 @@ module.exports = homebridge => {
      */
     get category() {
       // subclasses should override this
-      return Accessory.Categories.OTHER
+      return homebridge.hap.Categories.OTHER
     }
 
     /**

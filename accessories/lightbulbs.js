@@ -1,6 +1,5 @@
 
 module.exports = homebridge => {
-  const Accessory = homebridge.hap.Accessory
   const ColorLightbulbAbility =
     require('../abilities/color-lightbulb')(homebridge)
   const LightbulbAbility = require('../abilities/lightbulb')(homebridge)
@@ -29,7 +28,7 @@ module.exports = homebridge => {
     }
 
     get category() {
-      return Accessory.Categories.LIGHTBULB
+      return homebridge.hap.Categories.LIGHTBULB
     }
 
     /**
@@ -65,7 +64,7 @@ module.exports = homebridge => {
     }
 
     get category() {
-      return Accessory.Categories.LIGHTBULB
+      return homebridge.hap.Categories.LIGHTBULB
     }
 
     /**
@@ -108,7 +107,7 @@ module.exports = homebridge => {
     }
 
     get category() {
-      return Accessory.Categories.LIGHTBULB
+      return homebridge.hap.Categories.LIGHTBULB
     }
 
     /**
@@ -146,7 +145,7 @@ module.exports = homebridge => {
     }
 
     get category() {
-      return Accessory.Categories.LIGHTBULB
+      return homebridge.hap.Categories.LIGHTBULB
     }
 
     /**
